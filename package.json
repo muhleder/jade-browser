@@ -2,7 +2,7 @@
   "author": "Nathan White <nw@nwhite.net>"
 , "name": "jade-browser"
 , "description": "express/connect middleware that serves jade compiled templates to the browser"
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "repository": {
     "url": "https://github.com/storify/jade-browser/"
   }
