@@ -1,4 +1,3 @@
-
 # Jade Browser
 
   Middleware for express/connect to expose jade templates to the web browser. It provides a few additional features like express-like render function with partial handling.
@@ -30,7 +29,7 @@
 
 ## Contributors
 
-    * Nathan White ([nw](http://github.com/nw))
+  * Nathan White ([nw](http://github.com/nw))
     
 ## License 
 
