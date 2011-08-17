@@ -47,8 +47,9 @@ module.exports = function(path, dir, options){
                process.nextTick(getFile);
              }); 
            } else {
+             var code = jade.runtime.escape.toString() +';'+ jade.runtime.attrs.toString() + '; return attrs(obj);'
              payload.expose({
-                attrs: jade.runtime.attrs
+                attrs: new Function('obj', code)
               , escape: jade.runtime.escape
               , dirname: utils.dirname
               , normalize: utils.normalize
