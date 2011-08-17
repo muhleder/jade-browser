@@ -1,5 +1,5 @@
 {
-  "author": "Storify Dev <dev@storify.com>"
+  "author": "Nathan White <nw@nwhite.net>"
 , "name": "jade-browser"
 , "description": "express/connect middleware that serves jade compiled templates to the browser"
 , "version": "0.0.1"
@@ -11,7 +11,7 @@
     "node": "v0.4.9"
   }
 , "dependencies": {
-      "jade": "0.14.0"
+      "jade": "0.14.2"
     , "uglify-js": "1.0.6"
   }
 }
