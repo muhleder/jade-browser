@@ -22,7 +22,38 @@
   * option to attach cache control
   * provides helpers for handling rendering/partials just like express.
   * relative path handling even from within partials.
+  * ability to completely namespace to avoid any naming collisions on the browser.
+  * partials inherit parent locals
+
+## Usage
+
+### In Node.js
+  As middleware jade-browser is simple to use.
+
+    var express = require('express')
+      , jade_browser = require('jade-browser')
+      , app = express.createServer();
+    
+    app.use(jade_browser('/js/templates.js', __dirname + '/views', options));
   
+#### Options
+  - `namespace`   Namespace for the browser (default: 'jade')
+  - `minify`    Minifies the output (default: false)
+  - `maxAge`    Time in seconds to cache the results (default: 86400)
+  
+### Browser
+
+    jade.render('path/to/template', { values: for_template });
+    
+For direct access (for templates that have no need for partials).
+
+    jade.templates['path/to/template.jade'](locals);
+    
+Note: With render '.jade' extension is not required. Relative paths can be used in templates and in render function.
+
+    jade.render('path/../to/../test');
+
+
 ## Credit
 
   Large amounts of this code is inspired by TJ. Parts of express-expose and internal parts of express are recycled to make this happen.
