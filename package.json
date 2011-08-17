@@ -4,7 +4,7 @@
 , "description": "express/connect middleware that serves jade compiled templates to the browser"
 , "version": "0.0.1"
 , "repository": {
-    "url": ""
+    "url": "https://github.com/storify/jade-browser/"
   }
 , "main": "./index.js"
 , "engines": {
