@@ -2,12 +2,14 @@
 
   Middleware for express/connect to expose jade templates to the web browser. It provides a few additional features like express-like render function with partial handling.
   
-    var express = require('express')
-      , jade_browser = require('jade-browser')
-      , app = express.createServer();
-      
-    app.use(jade_browser(url_endpoint, template_dir, options));
-    
+```javascript
+var express = require('express')
+  , jade_browser = require('jade-browser')
+  , app = express.createServer();
+  
+app.use(jade_browser(url_endpoint, template_dir, options));
+```
+
 ## Installation
 
     $ npm install jade-browser
@@ -30,12 +32,14 @@
 ### In Node.js
   As middleware jade-browser is simple to use.
 
-    var express = require('express')
-      , jade_browser = require('jade-browser')
-      , app = express.createServer();
-    
-    app.use(jade_browser('/js/templates.js', __dirname + '/views', options));
-  
+```javascript
+var express = require('express')
+  , jade_browser = require('jade-browser')
+  , app = express.createServer();
+
+app.use(jade_browser('/js/templates.js', __dirname + '/views', options));
+```
+
 #### Options
   - `namespace`   Namespace for the browser (default: 'jade')
   - `minify`    Minifies the output (default: false)
@@ -43,16 +47,21 @@
   
 ### Browser
 
-    jade.render('path/to/template', { values: for_template });
+```javascript
+jade.render('path/to/template', { values: for_template });
+```
     
 For direct access (for templates that have no need for partials).
 
-    jade.templates['path/to/template.jade'](locals);
+```javascript
+jade.templates['path/to/template.jade'](locals);
+```
     
 Note: With render '.jade' extension is not required. Relative paths can be used in templates and in render function.
 
-    jade.render('path/../to/../test');
-
+```javascript
+jade.render('path/../to/../test');
+```
 
 ## Credit
 
