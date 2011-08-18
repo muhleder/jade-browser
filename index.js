@@ -31,7 +31,7 @@ module.exports = function(path, dir, options){
       res.writeHead(200, headers);
       res.end(built);
      } else {
-       utils.walk(dir, function(results){
+       utils.walk(dir, ext, function(results){
          var file;
          (function getFile(){
            if((file = results.shift()) && file.match(ext+'$')){
