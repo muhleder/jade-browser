@@ -12,6 +12,8 @@
   }
 , "dependencies": {
       "jade": "0.14.2"
+    , "async": "0.1.12"
+    , "glob": "2.0.9"
     , "uglify-js": "1.0.6"
   }
 }

@@ -37,11 +37,17 @@ var express = require('express')
   , jade_browser = require('jade-browser')
   , app = express.createServer();
 
-app.use(jade_browser('/js/templates.js', __dirname + '/views', options));
+app.use(jade_browser('/js/templates.js', '**', options));
 ```
 
+### Params
+  - `filename`  The filename of the resulting compiled templates file
+  - `patterns`  A single string or array of patterns used to glob for template files
+  - `options`   Options object, see below (optional)
+
 #### Options
-  - `namespace`   Namespace for the browser (default: 'jade')
+  - `root`      The root of the views (default: __dirname)
+  - `namespace` Namespace for the browser (default: 'jade')
   - `minify`    Minifies the output (default: false)
   - `maxAge`    Time in seconds to cache the results (default: 86400)
   
@@ -70,6 +76,8 @@ jade.render('path/../to/../test');
 ## Contributors
 
   * Nathan White ([nw](http://github.com/nw))
+  * Adrian Bravo ([adrianbravo](http://github.com/adrianbravo))
+  * Conner Petzold ([cpetzold](http://github.com/cpetzold))
     
 ## License 
 
