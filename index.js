@@ -7,14 +7,13 @@ var fs = require('fs')
   , compiler = require('uglify-js').uglify
   , Expose = require('./lib/expose')
   , render = require('./lib/render').render
-  , utils = require('./lib/utils')
-  , built = false;
+  , utils = require('./lib/utils');
 
 module.exports = function(exportPath, patterns, options){
   var options = options || {}
     , ext = options.ext || 'jade'
     , namespace = options.namespace || 'jade'
-    , recursive = (typeof options.recursive != 'undefined') ? options.recursive : true
+    , built = false
     , debug = options.debug || false
     , minify = options.minify || false
     , maxAge = options.maxAge || 86400
