@@ -1,19 +1,20 @@
 {
-  "author": "Storify <dev@storify.com>"
-, "name": "jade-browser"
-, "description": "express/connect middleware that serves jade compiled templates to the browser"
-, "version": "0.0.3"
-, "repository": {
+  "author": "Storify <dev@storify.com>",
+  "name": "jade-browser",
+  "description": "express/connect middleware that serves jade compiled templates to the browser",
+  "version": "0.0.4",
+  "repository": {
     "url": "https://github.com/storify/jade-browser/"
-  }
-, "main": "./index.js"
-, "engines": {
+  },
+  "main": "./index.js",
+  "engines": {
     "node": ">= 0.4"
-  }
-, "dependencies": {
-      "jade": "0.14.2"
-    , "async": "0.1.12"
-    , "glob": "2.0.9"
-    , "uglify-js": "1.0.6"
-  }
+  },
+  "dependencies": {
+    "jade": "0.14.2",
+    "async": "0.1.12",
+    "glob": "2.0.9",
+    "uglify-js": "1.0.6"
+  },
+  "devDependencies": {}
 }
